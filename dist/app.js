@@ -1,19 +1,40 @@
 "use strict";
-// const a: string = "Hello World";
-// const n: number = 3;
-// const b: boolean = true;
-// const d: null = null;
-// const arrOfString: string[] = ["aze", "aze", "aze"];
-// const arrOfNumber: number[] = [1, 2, 3];
-// const arrOfBoth: (number|string )[] = [1, 2, "aze"];
-// const user: {firstname: string, [key: string]: string} = {firstname: "John", lastname: "Doe"};
-// const date: Date = new Date();
-// const cb: (e: MouseEvent) => void = (e: MouseEvent): number => {
-//     return 3;
-// };
-// function printId(id: number | string): void {
-//     console.log(id.toString());    
-// };
+function consoleSize(arg) {
+    console.log(arg.length);
+    return arg;
+}
+;
+const abb = consoleSize([5]);
+function identity(arg) {
+    return arg;
+}
+const userB = {
+    firstname: 'John',
+    lastname: 'Doe',
+    age: 32
+};
+const aa = identity(3);
+function first(arg) {
+    return arg[0];
+}
+const aaa = ["add", "def", 2];
+const a = "Hello World";
+const n = 3;
+const b = true;
+const d = null;
+const arrOfString = ["aze", "aze", "aze"];
+const arrOfNumber = [1, 2, 3];
+const arrOfBoth = [1, 2, "aze"];
+const user = { firstname: "John", lastname: "Doe" };
+const userWithType = { firstname: "John", lastname: "Doe" };
+const date = new Date();
+const cb = (e) => {
+    return 3;
+};
+function printId(id) {
+    console.log(id.toString());
+}
+;
 const compteur = document.querySelector('#compteur');
 let i = 0;
 const increment = (e) => {
@@ -25,7 +46,7 @@ const increment = (e) => {
     ;
 };
 compteur === null || compteur === void 0 ? void 0 : compteur.addEventListener('click', increment);
-function printId(id) {
+function printId2(id) {
     if (typeof id === "number") {
         console.log(id.toString() + " is a number");
     }
